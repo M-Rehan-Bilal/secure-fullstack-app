@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #17212b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #174ea6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  background: #fff;
+  border-bottom: 1px solid #dfe5ea;
+}
+
+.nav-links,
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.container {
+  width: min(900px, calc(100% - 32px));
+  margin: 32px auto;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #dfe5ea;
+  border-radius: 6px;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+
+input {
+  padding: 9px;
+  border: 1px solid #aeb8c2;
+  border-radius: 4px;
+  font: inherit;
+}
+
+button {
+  width: fit-content;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 4px;
+  background: #174ea6;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.link-button {
+  padding: 0;
+  background: transparent;
+  color: #174ea6;
+  text-decoration: underline;
+}
+
+.message {
+  margin: 4px 0;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.message.error {
+  background: #fdecee;
+  color: #b00020;
+}
+
+.message.success {
+  background: #edf8f0;
+  color: #176b36;
+}
+
+.status-box {
+  max-width: 400px;
+  padding: 16px;
+  border: 1px solid #dfe5ea;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #dfe5ea;
+  text-align: left;
+}
+
+th {
+  background: #f4f6f8;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .nav-links,
+  .nav-user {
+    flex-wrap: wrap;
+  }
+
+  .container {
+    margin: 16px auto;
+    padding: 16px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
